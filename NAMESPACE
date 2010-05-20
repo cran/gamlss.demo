@@ -1,0 +1,31 @@
+
+# functions
+
+export( demo.BE, demo.BCCG, demo.BCT,  demo.BCPE, # continuous
+        demo.EXP, demo.exGAUS,demo.EGB2, demo.GA,
+        demo.GB1, demo.GB2,  demo.GG, demo.GIG,
+        demo.GT, demo.GU, demo.IG, demo.JSU,
+        demo.JSUo,  demo.LO,  demo.LOGNO, # LNO
+        demo.NET, demo.NO, demo.PE, demo.RG,
+        demo.SEP1, demo.SEP2, demo.SEP3 , demo.SEP4,
+        demo.SHASH, demo.ST1, demo.ST2, demo.ST3,
+        demo.ST4, demo.ST5, demo.TF, demo.WEI,
+        demo.WEI2, demo.WEI3,    #
+        demo.NO.LO, demo.PE.NO, demo.TF.NO, demo.NO.LOGNO,# continuous double
+        demo.ZAGA, demo.ZAIG, demo.BEINF, demo.BEINF1, # mixed
+        demo.BEINF0,
+        demo.BB, demo.BI, demo.DEL,  demo.LG,
+        demo.NBI, demo.NBII,  demo.PO,  demo.PIG,
+        demo.SICHEL,
+        demo.ZABI, demo.ZIBI,
+        demo.ZAP,
+        demo.ZANBI, demo.ZINBI,
+        demo.ZIP, demo.ZIP2,
+        demo.ZIPIG,
+        demo.ZABB, demo.ZIBB,
+        demo.NOtr, demo.GAtr,
+        demo.BetaSplines, demo.discreteSmo,
+        demo.histSmo, demo.interpolateSmo,
+        demo.PenSplines, demo.Locmean,
+        demo.Locpoly, demo.WLocmean,
+        demo.WLocpoly)# truncated
