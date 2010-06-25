@@ -18,14 +18,15 @@ export( demo.BE, demo.BCCG, demo.BCT,  demo.BCPE, # continuous
         demo.NBI, demo.NBII,  demo.PO,  demo.PIG,
         demo.SICHEL,
         demo.ZABI, demo.ZIBI,
-        demo.ZAP,
+        demo.ZAP,demo.ZALG,
         demo.ZANBI, demo.ZINBI,
         demo.ZIP, demo.ZIP2,
         demo.ZIPIG,
         demo.ZABB, demo.ZIBB,
-        demo.NOtr, demo.GAtr,
+        demo.NOtr, demo.GAtr, # truncated
         demo.BetaSplines, demo.discreteSmo,
         demo.histSmo, demo.interpolateSmo,
         demo.PenSplines, demo.Locmean,
         demo.Locpoly, demo.WLocmean,
-        demo.WLocpoly)# truncated
+        demo.WLocpoly,
+        demoDist, demoPsplines)#
