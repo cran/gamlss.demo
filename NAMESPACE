@@ -29,4 +29,4 @@ export( demo.BE, demo.BCCG, demo.BCT,  demo.BCPE, # continuous
         demo.PenSplines, demo.Locmean,
         demo.Locpoly, demo.WLocmean,
         demo.WLocpoly,
-        demoDist, demoPsplines)#
+        demoDist, demoPsplines, gamlss.demo, demoLpolyS)#
