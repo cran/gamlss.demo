@@ -71,6 +71,14 @@
 \alias{demo.PIG}
 \alias{demo.NOtr}
 \alias{demo.GAtr}
+\alias{demo.YULE}
+\alias{demo.WARING}
+\alias{demo.GEOM}
+\alias{demo.IGAMMA}
+\alias{demo.PARETO2}
+\alias{demo.PARETO2o}
+\alias{demo.SHASHo}
+\alias{demo.SHASHo2}
 
 
 \title{Demos for different gamlss.family distributions}
@@ -152,7 +160,17 @@ demo.ZINBI()
 demo.ZIPIG()
 demo.NOtr() 
 demo.GAtr()
+demo.YULE()
+demo.WARING()
+demo.GEOM()
+demo.IGAMMA()
+demo.PARETO2()
+demo.PARETO2o()
+demo.SHASHo()
+demo.SHASHo2()
 }
+
+
 
 \value{An rpanel plot}
 \references{

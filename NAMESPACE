@@ -23,6 +23,8 @@ export( demo.BE, demo.BCCG, demo.BCT,  demo.BCPE, # continuous
         demo.ZIP, demo.ZIP2,
         demo.ZIPIG,
         demo.ZABB, demo.ZIBB,
+        demo.YULE, demo.WARING, demo.GEOM, demo.IGAMMA, demo.PARETO2,
+        demo.SHASHo, demo.SHASHo2,  demo.PARETO2o, 
         demo.NOtr, demo.GAtr, # truncated
         demo.BetaSplines, demo.discreteSmo,
         demo.histSmo, demo.interpolateSmo,
