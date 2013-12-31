@@ -29,7 +29,7 @@ if (interactive())
   panel
 }
          ps.panel = rp.control('Local Mean Smoother', size = c(400, 200),  span = 0.5)
-         rp.slider(ps.panel, var = span, from = 0.01, to = 2,  action = ps.smooth, resolution = 0.01, showvalue = T, title = 'span')
+         rp.slider(ps.panel, variable = span, from = 0.01, to = 2,  action = ps.smooth, resolution = 0.01, showvalue = T, title = 'span')
     }
 }
 #---------------------------------------------------------------
@@ -70,9 +70,9 @@ if (interactive())
 }
 
          ps.panel = rp.control('Local Polynomial Smoother', size = c(400, 200), span=0.5)
-         rp.slider(ps.panel, var = span, from = 0.1, to = 2,  action = ps.smooth, resolution = 0.1, showvalue = T, title = 'span')
-         #rp.doublebutton(ps.panel, var = span,  action = ps.smooth, initval = 0.5,  step = 0.1, range = c(0, 2), showvalue = T, "Polynomial order")
-         rp.doublebutton(ps.panel, var = order,  action = ps.smooth, initval = 2,  step = 1, range = c(1, 4), showvalue = T, "Polynomial order")
+         rp.slider(ps.panel, variable = span, from = 0.1, to = 2,  action = ps.smooth, resolution = 0.1, showvalue = T, title = 'span')
+         #rp.doublebutton(ps.panel, variable = span,  action = ps.smooth, initval = 0.5,  step = 0.1, range = c(0, 2), showvalue = T, "Polynomial order")
+         rp.doublebutton(ps.panel, variable = order,  action = ps.smooth, initval = 2,  step = 1, range = c(1, 4), showvalue = T, "Polynomial order")
     }
 }
 #---------------------------------------------------------------
@@ -110,8 +110,8 @@ if (interactive())
   panel
 }
          ps.panel = rp.control('Locally Weighed Mean Smoother', size = c(400, 200), lambda=.5)
-         rp.slider(ps.panel, var = lambda, from = -6, to = 6,  action = ps.smooth, resolution = 0.2, showvalue = T, title = 'Set log(lambda)')
-        # rp.doublebutton(ps.panel, var = lambda,  action = ps.smooth, initval = 0.5,  step = 0.1, range = c(0, 2), showvalue = T, "lamba")
+         rp.slider(ps.panel, variable = lambda, from = -6, to = 6,  action = ps.smooth, resolution = 0.2, showvalue = T, title = 'Set log(lambda)')
+        # rp.doublebutton(ps.panel, variable = lambda,  action = ps.smooth, initval = 0.5,  step = 0.1, range = c(0, 2), showvalue = T, "lamba")
     }
 }
 #----------------------------------------------------------------------
@@ -153,8 +153,8 @@ if (interactive())
 }
 
          ps.panel = rp.control('Local Weighted Polynomial Smoother', size = c(400, 200), , lambda=.5)
-         rp.slider(ps.panel, var = lambda, from = -6, to = 6,  action = ps.smooth, resolution = 0.2, showvalue = T, title = 'Set log(lambda)')
-         rp.doublebutton(ps.panel, var = order,  action = ps.smooth, initval = 2,  step = 1, range = c(1, 4), showvalue = T, "Polynomial order")
+         rp.slider(ps.panel, variable = lambda, from = -6, to = 6,  action = ps.smooth, resolution = 0.2, showvalue = T, title = 'Set log(lambda)')
+         rp.doublebutton(ps.panel, variable = order,  action = ps.smooth, initval = 2,  step = 1, range = c(1, 4), showvalue = T, "Polynomial order")
     }
 }
 #---------------------------------------------------------

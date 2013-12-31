@@ -61,7 +61,7 @@ if (interactive())
       panel
    }
          ws.panel = rp.control('Smooth Histogram', lla = 1)
-         rp.slider(ws.panel, var = lla, from = -2, to = 10, action = ws.smooth, resolution = 0.1, showvalue = T, title = 'Set log10(lambda)')
-         rp.doublebutton(ws.panel, var = order, action = ws.smooth, initval = 2, step = 1, range = c(1, 4), showvalue = T, "Order")
+         rp.slider(ws.panel, variable = lla, from = -2, to = 10, action = ws.smooth, resolution = 0.1, showvalue = T, title = 'Set log10(lambda)')
+         rp.doublebutton(ws.panel, variable = order, action = ws.smooth, initval = 2, step = 1, range = c(1, 4), showvalue = T, "Order")
    }
 }

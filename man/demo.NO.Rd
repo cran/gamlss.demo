@@ -79,7 +79,12 @@
 \alias{demo.PARETO2o}
 \alias{demo.SHASHo}
 \alias{demo.SHASHo2}
-
+\alias{demo.LOGITNO}
+\alias{demo.LOGNO2} 
+\alias{demo.SN1}
+\alias{demo.SN2}
+\alias{demo.SST}
+\alias{demo.TF2}
 
 \title{Demos for different gamlss.family distributions}
 \description{
@@ -168,6 +173,12 @@ demo.PARETO2()
 demo.PARETO2o()
 demo.SHASHo()
 demo.SHASHo2()
+demo.LOGITNO()
+demo.LOGNO2()
+demo.SN1()
+demo.SN2()
+demo.SST()
+demo.TF2()
 }
 
 

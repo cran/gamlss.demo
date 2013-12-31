@@ -61,7 +61,7 @@ if (interactive())
     }
          bs.panel <- rp.control('B-spline visualizer', nseg = 5, size = c(300, 100))
          rp.slider(bs.panel, nseg, 1, 20, action=bs.draw, "B-splines")
-         rp.doublebutton(bs.panel, var = bdeg, action = bs.draw, initval = 3, step = 1, range = c(0, 4), showvalue = T, "Degree")
+         rp.doublebutton(bs.panel, variable = bdeg, action = bs.draw, initval = 3, step = 1, range = c(0, 4), showvalue = T, "Degree")
          rp.button(bs.panel, action = bs.random, 'Random')     
     }
    

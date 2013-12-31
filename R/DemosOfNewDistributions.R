@@ -10,10 +10,10 @@ demo.SHASHo <- function()
           panel   
          }
          SHASHpanel <- rp.control('SHASHo family', sigma = 1, mu=0, nu=0, tau=1)
-        rp.slider(SHASHpanel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
-        rp.slider(SHASHpanel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
-        rp.slider(SHASHpanel, var=nu,  from=-4, to=4,  resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
-        rp.slider(SHASHpanel, var=tau, from=0.01, to=2,  resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
+        rp.slider(SHASHpanel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(SHASHpanel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(SHASHpanel, variable=nu,  from=-4, to=4,  resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(SHASHpanel, variable=tau, from=0.01, to=2,  resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -29,10 +29,10 @@ demo.SHASHo2 <- function()
           panel   
          }
          SHASHpanel <- rp.control('SHASHo2 family', sigma = 1, mu=0, nu=0, tau=1)
-        rp.slider(SHASHpanel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
-        rp.slider(SHASHpanel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
-        rp.slider(SHASHpanel, var=nu,  from=-3, to=3,  resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
-        rp.slider(SHASHpanel, var=tau, from=0.01, to=4,  resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
+        rp.slider(SHASHpanel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(SHASHpanel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(SHASHpanel, variable=nu,  from=-3, to=3,  resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(SHASHpanel, variable=tau, from=0.01, to=4,  resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -49,8 +49,8 @@ demo.PARETO2 <- function()
           panel   
          }
          PARETOpanel <- rp.control('PARETO2 family', sigma = 1, mu=1)
-        rp.slider(PARETOpanel, var=mu, from=0.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
-        rp.slider(PARETOpanel, var=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(PARETOpanel, variable=mu, from=0.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(PARETOpanel, variable=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 }
 #-------------------------------------------------------------------------------------
@@ -67,8 +67,8 @@ demo.PARETO2o <- function()
           panel   
          }
          PARETOpanel <- rp.control('PARETO2o family', sigma = 1, mu=1)
-        rp.slider(PARETOpanel, var=mu, from=0.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
-        rp.slider(PARETOpanel, var=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(PARETOpanel, variable=mu, from=0.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(PARETOpanel, variable=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 }
 #-------------------------------------------------------------------------------------
@@ -85,8 +85,8 @@ demo.IGAMMA <- function()
           panel   
          }
          IGAMMApanel <- rp.control('IGAMMA family', sigma = 1, mu=1)
-        rp.slider(IGAMMApanel, var=mu, from=0.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(IGAMMApanel, var=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(IGAMMApanel, variable=mu, from=0.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
+        rp.slider(IGAMMApanel, variable=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
    }
 }
 #-------------------------------------------------------------------------------------
@@ -107,7 +107,7 @@ demo.YULE <- function()
           panel   
          }
          YULEpanel <- rp.control('YULE',  mu=1, ymax=1)
-        rp.slider(YULEpanel, var=mu, from=0.1, to=50, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
+        rp.slider(YULEpanel, variable=mu, from=0.1, to=50, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -128,7 +128,7 @@ demo.WARING <- function()
           panel   
          }
          WARINGpanel <- rp.control('WARING',  mu=1, ymax=1)
-        rp.slider(WARINGpanel, var=mu, from=0.1, to=50, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
+        rp.slider(WARINGpanel, variable=mu, from=0.1, to=50, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -149,6 +149,6 @@ demo.GEOM <- function()
           panel   
          }
          GEOMpanel <- rp.control('GEOM',  mu=1, ymax=1)
-        rp.slider(GEOMpanel, var=mu, from=0.1, to=50, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
+        rp.slider(GEOMpanel, variable=mu, from=0.1, to=50, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
    }
 }

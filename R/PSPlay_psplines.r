@@ -73,9 +73,9 @@ if (interactive())
 }
 
          ps.panel = rp.control('PSP', size = c(400, 200),  lla = 1, ord = 2, nseg = 10, bdeg = 3)
-         rp.slider(ps.panel, var = lla, from = -4, to = 6,  action = ps.smooth, resolution = 0.2, showvalue = T, title = 'Set log10(lambda)')
-         rp.slider(ps.panel, var = nseg, from = 3, to = 20, action = ps.smooth, resolution = 1, showvalue = T, title = 'Size of basis')
-         rp.doublebutton(ps.panel, var = ord,  action = ps.smooth, initval = 2,  step = 1, range = c(1, 4), showvalue = T, "Penalty order")
-         rp.doublebutton(ps.panel, var = bdeg, action = ps.smooth, initval = 3,  step = 1, range = c(0, 4), showvalue = T, "B-spline degree")
+         rp.slider(ps.panel, variable = lla, from = -4, to = 6,  action = ps.smooth, resolution = 0.2, showvalue = T, title = 'Set log10(lambda)')
+         rp.slider(ps.panel, variable = nseg, from = 3, to = 20, action = ps.smooth, resolution = 1, showvalue = T, title = 'Size of basis')
+         rp.doublebutton(ps.panel, variable = ord,  action = ps.smooth, initval = 2,  step = 1, range = c(1, 4), showvalue = T, "Penalty order")
+         rp.doublebutton(ps.panel, variable = bdeg, action = ps.smooth, initval = 3,  step = 1, range = c(0, 4), showvalue = T, "B-spline degree")
     }
 }

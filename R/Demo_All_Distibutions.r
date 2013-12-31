@@ -18,13 +18,13 @@ demo.NO <- function()
          op <- par(mfrow = c(2, 1))
           y <- seq(-4, 4, length=200)
            plot(y, dNO(x=y, mu=panel$mu, sigma=panel$sigma), ylab="f(y)", main="normal probability density function", type="l")
-           plot(y, pNO(y, mu=panel$mu, sigma=panel$sigma), ylim=c(0.001,1), type="s", ylab="F(y)", main="normal cumulative probability function")
+           plot(y, pNO(y, mu=panel$mu, sigma=panel$sigma), ylim=c(0.001,1), type="s", ylab="F(y)", main="normal cumulative distribution function")
          par(op) 
           panel
           }
          NOpanel <- rp.control('Normal family', sigma = 1, mu=0,  ymax=0.8 )
-        rp.slider(NOpanel,  var=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(NOpanel,  var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(NOpanel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(NOpanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 }
 #--------------------------------------------------------------------------------------
@@ -40,13 +40,13 @@ demo.LO <- function()
          op<-par(mfrow = c(2, 1))
          y <- seq(-4, 4, length=200)
            plot(y, dLO(x=y, mu=panel$mu, sigma=panel$sigma), ylab="f(y)", main="logistic probability density function", type="l")
-           plot(y, pLO(y, mu=panel$mu, sigma=panel$sigma), ylim=c(0.001,1), type="s", ylab="F(y)", main="logistic cumulative probability function")
+           plot(y, pLO(y, mu=panel$mu, sigma=panel$sigma), ylim=c(0.001,1), type="s", ylab="F(y)", main="logistic cumulative distribution function")
          par(op) 
           panel
           }
          NOpanel <- rp.control('Logistic family', sigma = 1, mu=0,  ymax=0.8 )
-        rp.slider(NOpanel,  var=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(NOpanel,  var=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(NOpanel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(NOpanel,  variable=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 }
 #--------------------------------------------------------------------------------------
@@ -65,8 +65,8 @@ demo.NO.LO <- function()
           panel
           }
          NOLOpanel <- rp.control('Normal and Log Normal family', sigma = 1, mu=0,  ymax=0.8 )
-        rp.slider(NOLOpanel,  var=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(NOLOpanel,  var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(NOLOpanel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(NOLOpanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
  }
 #------------------------------------------------------------------------------------
@@ -82,13 +82,13 @@ demo.GU <- function()
          op<-par(mfrow = c(2, 1))
          y <- seq(-4, 4, length=200)
            plot(y, dGU(x=y, mu=panel$mu, sigma=panel$sigma), ylab="f(y)", main="Gumbel probability density function", type="l")
-           plot(y, pGU(y, mu=panel$mu, sigma=panel$sigma), ylim=c(0.001,1), type="s", ylab="F(y)", main="Gumbel cumulative probability function")
+           plot(y, pGU(y, mu=panel$mu, sigma=panel$sigma), ylim=c(0.001,1), type="s", ylab="F(y)", main="Gumbel cumulative distribution function")
          par(op) 
           panel
           }
          GUpanel <- rp.control('Gumber family', sigma = 1, mu=0,  ymax=0.8 )
-        rp.slider(GUpanel,  var=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(GUpanel,  var=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(GUpanel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(GUpanel,  variable=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 } 
 #--------------------------------------------------------------------------------------- 
@@ -104,13 +104,13 @@ demo.RG <- function()
          op<-par(mfrow = c(2, 1))
          y <- seq(-4, 4, length=200)
            plot(y, dRG(x=y, mu=panel$mu, sigma=panel$sigma), ylab="f(y)", main="Reverse Gumbel probability density function", type="l")
-           plot(y, pRG(y, mu=panel$mu, sigma=panel$sigma), ylim=c(0.001,1), type="s", ylab="F(y)", main="Reverse Gumbel cumulative probability function")
+           plot(y, pRG(y, mu=panel$mu, sigma=panel$sigma), ylim=c(0.001,1), type="s", ylab="F(y)", main="Reverse Gumbel cumulative distribution function")
          par(op) 
           panel
           }
          RGpanel <- rp.control('Reverse Gumbel family', sigma = 1, mu=0,  ymax=0.8 )
-        rp.slider(RGpanel,  var=mu, from=-2, to=2, resolution=0.10,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(RGpanel,  var=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(RGpanel,  variable=mu, from=-2, to=2, resolution=0.10,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(RGpanel,  variable=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 }
 #-------------------------------------------------------------------------------------
@@ -126,15 +126,15 @@ demo.exGAUS <- function()
          {     op<-par(mfrow = c(2, 1))
             y <- seq(-10, 30, length=300)
              plot(y, dexGAUS(x=y, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), ylab="f(y)", main="exGAUS probability density function", type="l")
-             plot(y, pexGAUS(q=y, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), ylab="F(y)", main="exGAUS cumulative probability function", type="l")
+             plot(y, pexGAUS(q=y, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), ylab="F(y)", main="exGAUS cumulative distribution function", type="l")
          par(op) 
           # curve(dTF(x, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), -5, 5,  ylab="PDF")
           panel
           }
          Epanel <- rp.control('exGAUS familly',  mu=0, sigma = 1, nu=1)
-        rp.slider(Epanel,  var=mu, from=-10, to=20, resolution=0.1,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(Epanel,  var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(Epanel,  var=nu, from=0.1, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = T) 
+        rp.slider(Epanel,  variable=mu, from=-10, to=20, resolution=0.1,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(Epanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(Epanel,  variable=nu, from=0.1, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE) 
    }
  }
  
@@ -154,12 +154,52 @@ demo.PE <- function()
           panel
           }
          PEpanel <- rp.control('PE familly', sigma = 1, mu=0, nu=2, ymax=0.6 )
-        rp.slider(PEpanel,  var=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(PEpanel,  var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(PEpanel,  var=nu, from=1, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = T) 
+        rp.slider(PEpanel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(PEpanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(PEpanel,  variable=nu, from=1, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE) 
    }
  }
- 
+#---------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
+#SN1
+demo.SN1 <- function()
+{
+  if (interactive()) 
+  {
+    mu <- sigma <- nu <- NULL
+    density.draw <- function(panel) 
+    {
+      y <- seq(-5, 5, length=200)
+      plot(y, dSN1(x=y, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), ylab="f(y)", main="Skew Nornal type 1 probability density function", type="l")
+      # curve(dTF(x, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), -5, 5,  ylab="PDF")
+      panel
+    }
+    SN1panel <- rp.control('SN1 familly', sigma = 1, mu=0, nu=0, ymax=0.6 )
+    rp.slider(SN1panel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+    rp.slider(SN1panel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+    rp.slider(SN1panel,  variable=nu, from=-5, to=5, resolution=0.1,  action = density.draw, title="nu",  showvalue = TRUE) 
+  }
+}
+#---------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------
+demo.SN2 <- function()
+{
+  if (interactive()) 
+  {
+    mu <- sigma <- nu <- NULL
+    density.draw <- function(panel) 
+    {
+      y <- seq(-5, 5, length=200)
+      plot(y, dSN2(x=y, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), ylab="f(y)", main="Skew Nornal type  2 probability density function", type="l")
+      # curve(dTF(x, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), -5, 5,  ylab="PDF")
+      panel
+    }
+    SN2panel <- rp.control('SN2 familly', sigma = 1, mu=0, nu=1, ymax=0.6 )
+    rp.slider(SN2panel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+    rp.slider(SN2panel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+    rp.slider(SN2panel,  variable=nu, from=0.1, to=5, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE) 
+  }
+}
 #---------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------
 # TF and NO
@@ -179,9 +219,9 @@ demo.PE.NO <- function()
           panel
           }
          TFpanel <- rp.control('PE against NO', sigma = 1, mu=0, nu=2, ymax=0.6 )
-        rp.slider(TFpanel,  var=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(TFpanel,  var=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(TFpanel,  var=nu, from=1, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = T) 
+        rp.slider(TFpanel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(TFpanel,  variable=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(TFpanel,  variable=nu, from=1, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE) 
    }
 }
  
@@ -201,11 +241,34 @@ demo.TF <- function()
           panel
           }
          TFpanel <- rp.control('t-familly', sigma = 1, mu=0, nu=10, ymax=0.6 )
-        rp.slider(TFpanel,  var=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(TFpanel,  var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(TFpanel,  var=nu, from=1, to=100, resolution=.1,  action = density.draw, title="nu",  showvalue = T) 
+        rp.slider(TFpanel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(TFpanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(TFpanel,  variable=nu, from=1, to=100, resolution=.1,  action = density.draw, title="nu",  showvalue = TRUE) 
    }
 }
+#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+# TF2
+demo.TF2 <- function()
+{
+  if (interactive()) 
+  {
+    mu <- sigma <- nu <- NULL
+    density.draw <- function(panel) 
+    {
+      y <- seq(-10, 10, length=200)
+      plot(y, dTF2(x=y, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), ylab="f(y)", main="t type 2 probability density function", type="l")
+      # curve(dTF(x, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), -5, 5,  ylab="PDF")
+      panel
+    }
+    TF2panel <- rp.control('t-familly type 2', sigma = 1, mu=0, nu=10, ymax=0.6 )
+    rp.slider(TF2panel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+    rp.slider(TF2panel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+    rp.slider(TF2panel,  variable=nu, from=2.1, to=100, resolution=.1,  action = density.draw, title="nu",  showvalue = TRUE) 
+  }
+}
+#-------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------
 # TF and NO
@@ -222,9 +285,9 @@ demo.TF.NO <- function()
           panel
           }
          TFpanel <- rp.control('t against NO', sigma = 1, mu=0, nu=10, ymax=0.6 )
-        rp.slider(TFpanel,  var=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(TFpanel,  var=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(TFpanel,  var=nu, from=1, to=100, resolution=0.1,  action = density.draw, title="nu",  showvalue = T) 
+        rp.slider(TFpanel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(TFpanel,  variable=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(TFpanel,  variable=nu, from=1, to=100, resolution=0.1,  action = density.draw, title="nu",  showvalue = TRUE) 
    }
 }
 # 4 parameter distributions
@@ -244,10 +307,10 @@ demo.EGB2 <- function()
           panel
           }
          EGB2panel <- rp.control('EGB2 family', sigma = 1, mu=0, nu=1, tau=1)
-        rp.slider(EGB2panel, var=mu,    from=-10, to=10, resolution=0.1,  action = density.draw, title="mu",     showvalue = T)  
-        rp.slider(EGB2panel, var=sigma, from=-2, to=2 ,resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(EGB2panel, var=nu,    from=0.1, to=5, resolution=0.01,  action = density.draw, title="nu",     showvalue = T)
-        rp.slider(EGB2panel, var=tau,   from=0.1, to=5, resolution=0.01,  action = density.draw, title="tau",    showvalue = T)  
+        rp.slider(EGB2panel, variable=mu,    from=-10, to=10, resolution=0.1,  action = density.draw, title="mu",     showvalue = TRUE)  
+        rp.slider(EGB2panel, variable=sigma, from=-2, to=2 ,resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(EGB2panel, variable=nu,    from=0.1, to=5, resolution=0.01,  action = density.draw, title="nu",     showvalue = TRUE)
+        rp.slider(EGB2panel, variable=tau,   from=0.1, to=5, resolution=0.01,  action = density.draw, title="tau",    showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -266,10 +329,10 @@ demo.GT <- function()
           panel
           }
          GTpanel <- rp.control('EGB2 family', sigma = 1, mu=0, nu=1, tau=1,)
-        rp.slider(GTpanel, var=mu,    from=-10, to=10, resolution=0.1,  action = density.draw, title="mu",     showvalue = T)  
-        rp.slider(GTpanel, var=sigma, from=0.1, to=10 ,resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(GTpanel, var=nu,    from=0.1, to=10, resolution=0.01,  action = density.draw, title="nu",     showvalue = T)
-        rp.slider(GTpanel, var=tau,   from=0.1, to=10, resolution=0.01,  action = density.draw, title="tau",    showvalue = T)  
+        rp.slider(GTpanel, variable=mu,    from=-10, to=10, resolution=0.1,  action = density.draw, title="mu",     showvalue = TRUE)  
+        rp.slider(GTpanel, variable=sigma, from=0.1, to=10 ,resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(GTpanel, variable=nu,    from=0.1, to=10, resolution=0.01,  action = density.draw, title="nu",     showvalue = TRUE)
+        rp.slider(GTpanel, variable=tau,   from=0.1, to=10, resolution=0.01,  action = density.draw, title="tau",    showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -286,10 +349,10 @@ demo.JSU <- function()
          panel
          }
          JSUpanel <- rp.control('JSU family', sigma = 2, mu=0, nu=1, tau=1 ) 
-        rp.slider(JSUpanel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(JSUpanel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(JSUpanel, var=nu, from=-15, to=15, resolution=0.1,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(JSUpanel, var=tau, from=0.1, to=10, resolution=0.01,  action = density.draw, title="tau",  showvalue = T)  
+        rp.slider(JSUpanel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(JSUpanel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(JSUpanel, variable=nu, from=-15, to=15, resolution=0.1,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(JSUpanel, variable=tau, from=0.1, to=10, resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
    }
 }
 # JSUo
@@ -304,10 +367,10 @@ demo.JSUo <- function()
          panel
          }
          JSUpanel <- rp.control('JSU family', sigma = 2, mu=0, nu=1, tau=1 ) 
-        rp.slider(JSUpanel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(JSUpanel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(JSUpanel, var=nu, from=-10, to=10, resolution=0.1,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(JSUpanel, var=tau, from=0.1, to=10, resolution=0.01,  action = density.draw, title="tau",  showvalue = T)  
+        rp.slider(JSUpanel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(JSUpanel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(JSUpanel, variable=nu, from=-10, to=10, resolution=0.1,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(JSUpanel, variable=tau, from=0.1, to=10, resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -324,10 +387,10 @@ demo.NET <- function()
           panel  
          }
          NETpanel <- rp.control('NET family', sigma = 1, mu=0, nu=1.5, tau=3)
-        rp.slider(NETpanel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(NETpanel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(NETpanel, var=nu, from=1, to=2, resolution=0.01,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(NETpanel, var=tau, from=2.01, to=10, resolution=0.01,  action = density.draw, title="tau",  showvalue = T)  
+        rp.slider(NETpanel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(NETpanel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(NETpanel, variable=nu, from=1, to=2, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(NETpanel, variable=tau, from=2.01, to=10, resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
     }
 }
 #-------------------------------------------------------------------------------------
@@ -343,10 +406,10 @@ demo.SHASH <- function()
           panel   
          }
          SHASHpanel <- rp.control('SHASH family', sigma = 1, mu=0, nu=0, tau=0)
-        rp.slider(SHASHpanel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(SHASHpanel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(SHASHpanel, var=nu,  from=-7, to=3,  resolution=0.01,  action = density.draw, title="log(nu)",  showvalue = T)
-        rp.slider(SHASHpanel, var=tau, from=-7, to=3,  resolution=0.01,  action = density.draw, title="log(tau)",  showvalue = T)  
+        rp.slider(SHASHpanel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(SHASHpanel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(SHASHpanel, variable=nu,  from=-7, to=3,  resolution=0.01,  action = density.draw, title="log(nu)",  showvalue = TRUE)
+        rp.slider(SHASHpanel, variable=tau, from=-7, to=3,  resolution=0.01,  action = density.draw, title="log(tau)",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -365,10 +428,10 @@ demo.SEP1 <- function()
           panel
           }
          SEP1panel <- rp.control('SEP1 family', sigma = 1, mu=0, nu=0, tau=1, ymax=0.8 )
-        rp.slider(SEP1panel, var=mu, from=-5, to=5, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(SEP1panel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(SEP1panel, var=nu, from=-10, to=10, resolution=0.1,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(SEP1panel, var=tau, from=-1, to=7, resolution=0.01,  action = density.draw, title="log(tau)",  showvalue = T)  
+        rp.slider(SEP1panel, variable=mu, from=-5, to=5, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(SEP1panel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(SEP1panel, variable=nu, from=-10, to=10, resolution=0.1,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(SEP1panel, variable=tau, from=-1, to=7, resolution=0.01,  action = density.draw, title="log(tau)",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -387,10 +450,10 @@ demo.SEP2 <- function()
           panel
           }
          SEP2panel <- rp.control('SEP2 family', sigma = 1, mu=0, nu=0, tau=1)
-        rp.slider(SEP2panel, var=mu,    from=-4,  to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(SEP2panel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(SEP2panel, var=nu,    from=-10, to=10, resolution=0.1,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(SEP2panel, var=tau,   from=-1,  to=7, resolution=0.01,  action = density.draw, title="log(tau)",  showvalue = T)  
+        rp.slider(SEP2panel, variable=mu,    from=-4,  to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(SEP2panel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(SEP2panel, variable=nu,    from=-10, to=10, resolution=0.1,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(SEP2panel, variable=tau,   from=-1,  to=7, resolution=0.01,  action = density.draw, title="log(tau)",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -409,10 +472,10 @@ demo.SEP3 <- function()
           panel
           }
          SEP3panel <- rp.control('SEP3 family', sigma = 1, mu=0, nu=0, tau=1 )
-        rp.slider(SEP3panel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(SEP3panel, var=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(SEP3panel, var=nu,  from=-3, to=7, resolution=0.01,  action = density.draw, title="log(nu)",  showvalue = T)
-        rp.slider(SEP3panel, var=tau, from=-3, to=7, resolution=0.01,  action = density.draw, title="log(tau)",  showvalue = T)  
+        rp.slider(SEP3panel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(SEP3panel, variable=sigma, from=0.01, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(SEP3panel, variable=nu,  from=-3, to=7, resolution=0.01,  action = density.draw, title="log(nu)",  showvalue = TRUE)
+        rp.slider(SEP3panel, variable=tau, from=-3, to=7, resolution=0.01,  action = density.draw, title="log(tau)",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -430,10 +493,10 @@ demo.SEP4 <- function()
           panel
           }
          SEP4panel <- rp.control('SEP4 family', sigma = 1, mu=0, nu=1, tau=1)
-        rp.slider(SEP4panel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(SEP4panel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(SEP4panel, var= nu, from=-3, to=7, resolution=0.01,  action = density.draw, title="log(nu)",  showvalue = T)
-        rp.slider(SEP4panel, var=tau, from=-3, to=7, resolution=0.01,  action = density.draw, title="log(tau)",  showvalue = T)  
+        rp.slider(SEP4panel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(SEP4panel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(SEP4panel, variable= nu, from=-3, to=7, resolution=0.01,  action = density.draw, title="log(nu)",  showvalue = TRUE)
+        rp.slider(SEP4panel, variable=tau, from=-3, to=7, resolution=0.01,  action = density.draw, title="log(tau)",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -451,10 +514,10 @@ demo.ST1 <- function()
           panel
           }
          ST1panel <- rp.control('ST1 family', sigma = 1, mu=0, nu=0, tau=1)
-        rp.slider(ST1panel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(ST1panel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(ST1panel, var=nu, from=-10, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(ST1panel, var=tau, from=0.1, to=7, resolution=0.01,  action = density.draw, title="tau",  showvalue = T)  
+        rp.slider(ST1panel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(ST1panel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(ST1panel, variable=nu, from=-10, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(ST1panel, variable=tau, from=0.1, to=7, resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -472,10 +535,10 @@ demo.ST2 <- function()
           panel
           }
          ST2panel <- rp.control('ST2 family', sigma = 1, mu=0, nu=0, tau=1)
-        rp.slider(ST2panel, var=mu, from=-4, to=4,    resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(ST2panel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(ST2panel, var=nu, from=-10, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(ST2panel, var=tau, from=0.1, to=7, resolution=0.01,  action = density.draw, title="tau",  showvalue = T)  
+        rp.slider(ST2panel, variable=mu, from=-4, to=4,    resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(ST2panel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(ST2panel, variable=nu, from=-10, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(ST2panel, variable=tau, from=0.1, to=7, resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -493,11 +556,33 @@ demo.ST3 <- function()
           panel
           }
          ST3panel <- rp.control('ST2 family', sigma = 1, mu=0, nu=1, tau=1)
-        rp.slider(ST3panel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(ST3panel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(ST3panel, var=nu,  from=0.1, to=7, resolution=0.01,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(ST3panel, var=tau, from=0.1, to=7, resolution=0.01,  action = density.draw, title="tau",  showvalue = T)  
+        rp.slider(ST3panel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(ST3panel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(ST3panel, variable=nu,  from=0.1, to=7, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(ST3panel, variable=tau, from=0.1, to=7, resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
    }
+}
+
+#-------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------
+# SST
+demo.SST <- function()
+{
+  if (interactive())  
+  {    mu <- sigma <- nu <- tau <- NULL
+       density.draw <- function(panel) 
+       {
+         y <- seq(-7, 7, length=200)
+         plot(y, dSST(x=y, mu=panel$mu, sigma=panel$sigma, nu=panel$nu, tau=panel$tau), ylab="f(y)", main="SST  probability density functions", type="l")
+         # curve(dST1(x, mu=panel$mu, sigma=panel$sigma, nu=panel$nu, tau=exp(panel$ltau)), -5, 5, ylim=c(0,panel$ymax), ylab="PDF", main="Skew t type 1 distribution")
+         panel
+       }
+       SSTpanel <- rp.control('ST2 family', sigma = 1, mu=0, nu=1, tau=10)
+       rp.slider(SSTpanel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+       rp.slider(SSTpanel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+       rp.slider(SSTpanel, variable=nu,  from=0.1, to=7, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
+       rp.slider(SSTpanel, variable=tau, from=2.1, to=100, resolution=0.1,  action = density.draw, title="tau",  showvalue = TRUE)  
+  }
 }
 #-------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------
@@ -514,10 +599,10 @@ demo.ST4 <- function()
           panel
           }
          ST4panel <- rp.control('ST4 family', sigma = 1, mu=0, nu=1, tau=1)
-        rp.slider(ST4panel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(ST4panel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(ST4panel, var=nu,  from=0.1, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(ST4panel, var=tau, from=0.1, to=10, resolution=0.01,  action = density.draw, title="tau",  showvalue = T)  
+        rp.slider(ST4panel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(ST4panel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(ST4panel, variable=nu,  from=0.1, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(ST4panel, variable=tau, from=0.1, to=10, resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -535,10 +620,10 @@ demo.ST5 <- function()
           panel
           }
          ST5panel <- rp.control('ST2 family', sigma = 1, mu=0, nu=0, tau=1)
-        rp.slider(ST5panel, var=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(ST5panel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(ST5panel, var=nu, from=-10, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(ST5panel, var=tau, from=0.1, to=7, resolution=0.01,  action = density.draw, title="tau",  showvalue = T)  
+        rp.slider(ST5panel, variable=mu, from=-4, to=4, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(ST5panel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(ST5panel, variable=nu, from=-10, to=10, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(ST5panel, variable=tau, from=0.1, to=7, resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
    }
 }
 #--------------------------------------------------------------------------------------
@@ -556,12 +641,12 @@ demo.EXP <- function()
          op <- par(mfrow = c(2, 1))
             y <- seq(0.01, 25, length=200)
            plot(y, dEXP(x=y, mu=panel$mu), ylab="f(y)", main="Exponential probability density function", type="l")
-           plot(y, pEXP(q=y, mu=panel$mu), ylim=c(0.001,1), type="s", ylab="F(y)", main="Exponetial cumulative probability function")
+           plot(y, pEXP(q=y, mu=panel$mu), ylim=c(0.001,1), type="s", ylab="F(y)", main="Exponential cumulative distribution function")
          par(op) 
           panel
           }
-         EXPpanel <- rp.control('Exponetial distribution', sigma = 1, mu = 1)
-        rp.slider(EXPpanel,  var=mu, from=0.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
+         EXPpanel <- rp.control('Exponential distribution', sigma = 1, mu = 1)
+        rp.slider(EXPpanel,  variable=mu, from=0.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
    }
 }
 #-------------------------------------------------------------------------------------
@@ -581,8 +666,8 @@ demo.GA <- function()
           panel
           }
          GApanel <- rp.control('Gamma family', sigma = 1, mu = 1,  ymax=1 )
-        rp.slider(GApanel,  var=mu, from=0.01, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(GApanel,  var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(GApanel,  variable=mu, from=0.01, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(GApanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 }
 #-------------------------------------------------------------------------------------
@@ -594,15 +679,53 @@ demo.LOGNO <- function()
    {
        mu <- sigma <-  NULL
         density.draw <- function(panel) 
-         { x <- seq(0.01, 30, length=200)
+         { x <- seq(0.01, 100, length=200)
            plot(x, dLOGNO(x, mu=panel$mu, sigma=panel$sigma), ylab="f(y)", main="LOGNO  probability density functions", type="l") 
           # curve(dLOGNO(x, mu=panel$mu, sigma=panel$sigma), 0.001, 10, ylim=c(0,panel$ymax), ylab="PDF")
           panel
           }
          LOGNOpanel <- rp.control('Log-normal family', sigma = 1, mu = 1,  ymax=1 )
-        rp.slider(LOGNOpanel,  var=mu, from=0.1, to=5, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(LOGNOpanel,  var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(LOGNOpanel,  variable=mu, from=-3, to=4, resolution=0.1,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(LOGNOpanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
+}
+#-------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------   
+# LOGNO2
+demo.LOGNO2 <- function()
+{
+  if (interactive()) 
+  {
+    mu <- sigma <-  NULL
+    density.draw <- function(panel) 
+    { x <- seq(0.01, 50, length=200)
+      plot(x, dLOGNO2(x, mu=panel$mu, sigma=panel$sigma), ylab="f(y)", main="LOGNO2  probability density functions", type="l") 
+      # curve(dLOGNO(x, mu=panel$mu, sigma=panel$sigma), 0.001, 10, ylim=c(0,panel$ymax), ylab="PDF")
+      panel
+    }
+    LOGNO2panel <- rp.control('Log-normal family', sigma = 1, mu = 1,  ymax=1 )
+    rp.slider(LOGNO2panel,  variable=mu, from=0.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+    rp.slider(LOGNO2panel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+  }
+}
+#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+# LOGITNO
+demo.LOGITNO <- function()
+{
+  if (interactive()) 
+  {
+    mu <- sigma <-  NULL
+    density.draw <- function(panel) 
+    { x <- seq(0.01, .99, length=200)
+      plot(x, dLOGITNO(x, mu=panel$mu, sigma=panel$sigma), ylab="f(y)", main="LOGITNO  probability density functions", type="l") 
+      # curve(dLOGNO(x, mu=panel$mu, sigma=panel$sigma), 0.001, 10, ylim=c(0,panel$ymax), ylab="PDF")
+      panel
+    }
+    LOGITNOpanel <- rp.control('Logit-normal family', sigma = 1, mu = 0.5,  ymax=1 )
+    rp.slider(LOGITNOpanel,  variable=mu, from=0.01, to=0.99, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+    rp.slider(LOGITNOpanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+  }
 }
 #-------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------
@@ -620,8 +743,8 @@ demo.NO.LOGNO <- function()
           panel
           }
          NOLOGNOpanel <- rp.control('Normal and Log Normal family', sigma = 1, mu=0)
-        rp.slider(NOLOGNOpanel,  var=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(NOLOGNOpanel,  var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(NOLOGNOpanel,  variable=mu, from=-2, to=2, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(NOLOGNOpanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 }
 #-----------------------------------------------------------------------------------
@@ -641,8 +764,8 @@ demo.IG <- function()
           panel
           }
          IGpanel <- rp.control('Inverse Gaussian family', sigma = .5, mu = 5)
-        rp.slider(IGpanel,  var=  mu,  from=0.1, to=20, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(IGpanel,  var=sigma, from=0.1, to=5,  resolution=0.01,  action = density.draw, title="log(sigma)",  showvalue = T) 
+        rp.slider(IGpanel,  variable=  mu,  from=0.1, to=20, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(IGpanel,  variable=sigma, from=0.1, to=5,  resolution=0.01,  action = density.draw, title="log(sigma)",  showvalue = TRUE) 
    }
 }
 
@@ -662,8 +785,8 @@ demo.WEI <- function()
           panel
           }
          WEIpanel <- rp.control('Weibull distribution', sigma = 1, mu = 5)
-        rp.slider(WEIpanel,  var=mu, from=0.1, to=20, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(WEIpanel,  var=sigma, from=0.1, to=4, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(WEIpanel,  variable=mu, from=0.1, to=20, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(WEIpanel,  variable=sigma, from=0.1, to=4, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 }
 #-------------------------------------------------------------------------------------
@@ -682,8 +805,8 @@ demo.WEI2 <- function()
           panel
           }
          WEIpanel <- rp.control('Weibull 2 distribution', sigma = 0, mu = 0,  ymax=1 )
-        rp.slider(WEIpanel,  var=mu,    from=-7, to=3, resolution=0.01,  action = density.draw, title="log(mu)",  showvalue = T)  
-        rp.slider(WEIpanel,  var=sigma, from=-3, to=3, resolution=0.01,  action = density.draw, title="log(sigma)",  showvalue = T) 
+        rp.slider(WEIpanel,  variable=mu,    from=-7, to=3, resolution=0.01,  action = density.draw, title="log(mu)",  showvalue = TRUE)  
+        rp.slider(WEIpanel,  variable=sigma, from=-3, to=3, resolution=0.01,  action = density.draw, title="log(sigma)",  showvalue = TRUE) 
    }
 }
 #-------------------------------------------------------------------------------------
@@ -702,8 +825,8 @@ demo.WEI3 <- function()
           panel
           }
          WEIpanel <- rp.control('Weibull 3 distribution', sigma = 2, mu = 5)
-        rp.slider(WEIpanel,  var=mu,    from=0.1, to=20, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(WEIpanel,  var=sigma, from=0.1, to=4, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(WEIpanel,  variable=mu,    from=0.1, to=20, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(WEIpanel,  variable=sigma, from=0.1, to=4, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 }
 
@@ -723,9 +846,9 @@ demo.BCCG <- function()
           panel
           }
          BCTpanel <- rp.control('BCCG family', sigma = 0.1, mu=10, nu=1)
-        rp.slider(BCTpanel, var=mu, from=1, to=20, resolution=0.1,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(BCTpanel, var=sigma, from=0.01, to=0.5, resolution=0.001,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(BCTpanel, var=nu, from=-4, to=6, resolution=0.1,  action = density.draw, title="nu",  showvalue = T) 
+        rp.slider(BCTpanel, variable=mu, from=1, to=20, resolution=0.1,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(BCTpanel, variable=sigma, from=0.01, to=0.5, resolution=0.001,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(BCTpanel, variable=nu, from=-4, to=6, resolution=0.1,  action = density.draw, title="nu",  showvalue = TRUE) 
    }
 }
 #-------------------------------------------------------------------------------------
@@ -739,14 +862,14 @@ demo.GG <- function()
         density.draw <- function(panel) 
          {
            x <- seq(0.01, 30, length=200)
-           plot(x,dGG(x, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), ylab="f(y)", main="Generalized Gamma  probability density functions", type="l") 
+           plot(x,dGG(x, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), ylab="f(y)", main="Generalised Gamma  probability density functions", type="l") 
            #curve(dGG(x, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), 0.001, 10, ylim=c(0,panel$ymax), ylab="PDF")
           panel
           }
          GGpanel <- rp.control('Genaralized  Gamma family', sigma = 1, mu=5, nu=0)
-        rp.slider(GGpanel, var=mu, from=.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(GGpanel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(GGpanel, var=nu, from=-5, to=5, resolution=0.1,  action = density.draw, title="nu",  showvalue = T) 
+        rp.slider(GGpanel, variable=mu, from=.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(GGpanel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(GGpanel, variable=nu, from=-5, to=5, resolution=0.1,  action = density.draw, title="nu",  showvalue = TRUE) 
    }
 }
 #-------------------------------------------------------------------------------------
@@ -759,14 +882,14 @@ demo.GIG <- function()
         density.draw <- function(panel) 
          {
            x <- seq(0.01, 30, length=200)
-           plot(x,dGIG(x, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), ylab="f(y)", main="Generalized Inverse Gaussian  probability density functions", type="l") 
+           plot(x,dGIG(x, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), ylab="f(y)", main="Generalised Inverse Gaussian probability density functions", type="l") 
            #curve(dGG(x, mu=panel$mu, sigma=panel$sigma, nu=panel$nu), 0.001, 10, ylim=c(0,panel$ymax), ylab="PDF")
           panel
           }
          GGpanel <- rp.control('Generalized Inverse Gaussian  family', sigma = 1, mu=5, nu=0)
-        rp.slider(GGpanel, var=mu, from=.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(GGpanel, var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(GGpanel, var=nu, from=-5, to=5, resolution=0.1,  action = density.draw, title="nu",  showvalue = T) 
+        rp.slider(GGpanel, variable=mu, from=.1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(GGpanel, variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(GGpanel, variable=nu, from=-5, to=5, resolution=0.1,  action = density.draw, title="nu",  showvalue = TRUE) 
    }
  }
 #-------------------------------------------------------------------------------------
@@ -789,9 +912,9 @@ if (interactive())
       panel
            }
          ppoispanel <- rp.control('ZAGA',  mu= 5, sigma=.5, nu=0.1, ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.01, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.01, to=2, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T)  
-         rp.slider(ppoispanel,  var=nu, from=0.01, to=0.99, resolution=0.01,  action = density.draw, title="nu",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.01, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.01, to=2, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
+         rp.slider(ppoispanel,  variable=nu, from=0.01, to=0.99, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)  
 
    }
   }
@@ -815,9 +938,9 @@ if (interactive())
       panel
            }
          ppoispanel <- rp.control('DEL',  mu= 5, sigma=.5, nu=0.1, ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.01, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.01, to=2, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T)  
-         rp.slider(ppoispanel,  var=nu, from=0.01, to=0.99, resolution=0.01,  action = density.draw, title="nu",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.01, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.01, to=2, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
+         rp.slider(ppoispanel,  variable=nu, from=0.01, to=0.99, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)  
 
    }
   }
@@ -839,10 +962,10 @@ demo.BCT <- function()
           panel
           }
          BCTpanel <- rp.control('BCT family', sigma = 0.1, mu=5, nu=1, tau=10 )
-        rp.slider(BCTpanel, var=mu, from=1, to=10, resolution=0.1,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(BCTpanel, var=sigma, from=0.01, to=0.5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(BCTpanel, var=nu, from=-4, to=6, resolution=0.1,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(BCTpanel, var=tau, from=1, to=30, resolution=0.1,  action = density.draw, title="tau",  showvalue = T)  
+        rp.slider(BCTpanel, variable=mu, from=1, to=10, resolution=0.1,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(BCTpanel, variable=sigma, from=0.01, to=0.5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(BCTpanel, variable=nu, from=-4, to=6, resolution=0.1,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(BCTpanel, variable=tau, from=1, to=30, resolution=0.1,  action = density.draw, title="tau",  showvalue = TRUE)  
    }
 }
 #----------------------------------------------------------------------------------------
@@ -860,10 +983,10 @@ demo.BCPE <- function()
           panel
           }
          BCPEpanel <- rp.control('BCPE family', sigma = 0.1, mu=5, nu=1, tau=2 )
-        rp.slider(BCPEpanel, var=mu,     from=1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(BCPEpanel, var=sigma, from=0.01, to=0.5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(BCPEpanel, var=nu,    from=-4, to=6, resolution=0.1,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(BCPEpanel, var=tau, from=.1, to=10, resolution=0.01,  action = density.draw, title="tau",  showvalue = T)  
+        rp.slider(BCPEpanel, variable=mu,     from=1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(BCPEpanel, variable=sigma, from=0.01, to=0.5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(BCPEpanel, variable=nu,    from=-4, to=6, resolution=0.1,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(BCPEpanel, variable=tau, from=.1, to=10, resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
  }
 }
 #----------------------------------------------------------------------------------------
@@ -881,10 +1004,10 @@ demo.GB2 <- function()
           panel
           }
          GB2panel <- rp.control('GB2 family', sigma = 1, mu=5, nu=1, tau=1)
-        rp.slider(GB2panel, var=mu, from=1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(GB2panel, var=sigma, from=-10, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
-        rp.slider(GB2panel, var=nu, from=.1, to=6, resolution=0.01,  action = density.draw, title="nu",  showvalue = T)
-        rp.slider(GB2panel, var=tau, from=.1, to=6, resolution=0.01,  action = density.draw, title="tau",  showvalue = T)  
+        rp.slider(GB2panel, variable=mu, from=1, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(GB2panel, variable=sigma, from=-10, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
+        rp.slider(GB2panel, variable=nu, from=.1, to=6, resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)
+        rp.slider(GB2panel, variable=tau, from=.1, to=6, resolution=0.01,  action = density.draw, title="tau",  showvalue = TRUE)  
    }
 }
 
@@ -906,8 +1029,8 @@ demo.BE <- function()
           panel
           }
          BEpanel <- rp.control('BE family', sigma = 0.5, mu = 0.5)
-        rp.slider(BEpanel,  var=mu,    from=0.01, to=.99,  resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(BEpanel,  var=sigma, from=0.01, to=0.99, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(BEpanel,  variable=mu,    from=0.01, to=.99,  resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(BEpanel,  variable=sigma, from=0.01, to=0.99, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 }
 #-------------
@@ -925,8 +1048,8 @@ demo.BEo <- function()
           panel
           }
          BEpanel <- rp.control('BE family', sigma = 5, mu = 5)
-        rp.slider(BEpanel,  var=mu, from=0.01, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
-        rp.slider(BEpanel,  var=sigma, from=0.01, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T) 
+        rp.slider(BEpanel,  variable=mu, from=0.01, to=10, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
+        rp.slider(BEpanel,  variable=sigma, from=0.01, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE) 
    }
 }
 #-----------------------------------------------------------------------------------
@@ -946,10 +1069,10 @@ demo.GB1 <- function()
        #par(op) 
        panel }
           ppoispanel <- rp.control('GB1',  mu= 0.5, sigma=0.5, nu=1,tau=1, ymax=1 )
-          rp.slider(ppoispanel,  var=mu,    from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="mu",  showvalue = T) 
-          rp.slider(ppoispanel,  var=sigma, from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="sigma",  showvalue = T)  
-          rp.slider(ppoispanel,  var=nu,    from = 0.1,to = 10,   resolution = 0.01,   action = density.draw, title="nu",  showvalue = T) 
-          rp.slider(ppoispanel,  var=tau,   from = 0.1,to = 10,   resolution = 0.01,   action = density.draw, title="tau",  showvalue = T) 
+          rp.slider(ppoispanel,  variable=mu,    from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+          rp.slider(ppoispanel,  variable=sigma, from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
+          rp.slider(ppoispanel,  variable=nu,    from = 0.1,to = 10,   resolution = 0.01,   action = density.draw, title="nu",  showvalue = TRUE) 
+          rp.slider(ppoispanel,  variable=tau,   from = 0.1,to = 10,   resolution = 0.01,   action = density.draw, title="tau",  showvalue = TRUE) 
    }
  }
 }
@@ -965,7 +1088,7 @@ demo.BEINF <- function()
            op<-par(mfrow = c(2, 1))
          y <- seq(0.001, .999,length=200)
        plotBEINF(mu=panel$mu, sigma=panel$sigma, nu=panel$nu, tau=panel$tau, ylab="f(y)", main="probability density function")
-       plot(y, pBEINF(q=y, mu=panel$mu, sigma=panel$sigma, nu=panel$nu, tau=panel$tau), type="s", ylim=c(0.001,1),  ylab="F(y)", main="cumulative probability function")
+       plot(y, pBEINF(q=y, mu=panel$mu, sigma=panel$sigma, nu=panel$nu, tau=panel$tau), type="s", ylim=c(0.001,1),  ylab="F(y)", main="cumulative distribution function")
        points(0, pBEINF(0, mu=panel$mu, sigma=panel$sigma, nu=panel$nu, tau=panel$tau), type="h")
        points(0, pBEINF(0, mu=panel$mu, sigma=panel$sigma, nu=panel$nu, tau=panel$tau), col="blue")
        points(1, pBEINF(1, mu=panel$mu, sigma=panel$sigma, nu=panel$nu, tau=panel$tau), type="h")
@@ -974,10 +1097,10 @@ demo.BEINF <- function()
          panel 
          }
           ppoispanel <- rp.control('BEINF',  mu= 0.5, sigma=0.5, nu=0.5,tau=0.5)
-          rp.slider(ppoispanel,  var=mu,    from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="mu",  showvalue = T) 
-          rp.slider(ppoispanel,  var=sigma, from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="sigma",  showvalue = T)  
-          rp.slider(ppoispanel,  var=nu,    from = 0.1, to = 10,   resolution = 0.01,   action = density.draw, title="nu",  showvalue = T) 
-          rp.slider(ppoispanel,  var=tau,   from = 0.1, to = 10,   resolution = 0.01,   action = density.draw, title="tau",  showvalue = T) 
+          rp.slider(ppoispanel,  variable=mu,    from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+          rp.slider(ppoispanel,  variable=sigma, from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
+          rp.slider(ppoispanel,  variable=nu,    from = 0.1, to = 10,   resolution = 0.01,   action = density.draw, title="nu",  showvalue = TRUE) 
+          rp.slider(ppoispanel,  variable=tau,   from = 0.1, to = 10,   resolution = 0.01,   action = density.draw, title="tau",  showvalue = TRUE) 
    }
  }
 }
@@ -1002,9 +1125,9 @@ demo.BEINF0 <- function()
          panel 
          }
           ppoispanel <- rp.control('BEINF',  mu= 0.5, sigma=0.5, nu=0.5)
-          rp.slider(ppoispanel,  var=mu,    from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="mu",  showvalue = T) 
-          rp.slider(ppoispanel,  var=sigma, from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="sigma",  showvalue = T)  
-          rp.slider(ppoispanel,  var=nu,    from = 0.1,to = 10,   resolution = 0.1,   action = density.draw, title="nu",  showvalue = T) 
+          rp.slider(ppoispanel,  variable=mu,    from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+          rp.slider(ppoispanel,  variable=sigma, from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
+          rp.slider(ppoispanel,  variable=nu,    from = 0.1,to = 10,   resolution = 0.1,   action = density.draw, title="nu",  showvalue = TRUE) 
    }
  }
 }
@@ -1027,9 +1150,9 @@ demo.BEINF1 <- function()
          panel 
          }
           ppoispanel <- rp.control('BEINF',  mu= 0.5, sigma=0.5, nu=0.5)
-          rp.slider(ppoispanel,  var=mu,    from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="mu",  showvalue = T) 
-          rp.slider(ppoispanel,  var=sigma, from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="sigma",  showvalue = T)  
-          rp.slider(ppoispanel,  var=nu,    from = 0.1,to = 10,   resolution = 0.1,   action = density.draw, title="nu",  showvalue = T) 
+          rp.slider(ppoispanel,  variable=mu,    from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+          rp.slider(ppoispanel,  variable=sigma, from=0.01,  to = 0.99, resolution = 0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
+          rp.slider(ppoispanel,  variable=nu,    from = 0.1,to = 10,   resolution = 0.1,   action = density.draw, title="nu",  showvalue = TRUE) 
    }
  }
 }
@@ -1049,14 +1172,14 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        x <- seq(0, 50, 1)
-       plot(x, dPO(x, mu=panel$mu), type="h", ylab="f(x)", main="probability density function")
+       plot(x, dPO(x, mu=panel$mu), type="h", ylab="f(x)", main="probability  function")
        points(x, dPO(x, mu=panel$mu), col="blue")
-       plot(x, pPO(x, mu=panel$mu), type="s", ylab="F(x)", main="cumulative probability function")
+       plot(x, pPO(x, mu=panel$mu), type="s", ylab="F(x)", main="cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('Poisson',  mu= 5,  ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE)  
    }
 }
 #----------------------------------------------------------------------------
@@ -1073,14 +1196,14 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        x <- seq(1, 50, 1)
-       plot(x, dZALG(x, mu=panel$mu), type="h", ylab="f(x)", main="LG probability density function")
+       plot(x, dZALG(x, mu=panel$mu), type="h", ylab="f(x)", main="LG probability function")
        points(x, dZALG(x, mu=panel$mu), col="blue")
-       plot(x, pZALG(x, mu=panel$mu), type="s", ylab="F(x)", main="LG cumulative probability function")
+       plot(x, pZALG(x, mu=panel$mu), type="s", ylab="F(x)", main="LG cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('ZALG',  mu= .5, sigma=.5,  ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="mu",  showvalue = T) 
+         rp.slider(ppoispanel,  variable=mu, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="mu",  showvalue = TRUE) 
    }
 }
 #----------------------------------------------------------------------------
@@ -1095,15 +1218,15 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        x <- seq(0, 50, 1)
-       plot(x, dNBI(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="NBI probability density function")
+       plot(x, dNBI(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="NBI probability function")
        points(x, dNBI(x, mu=panel$mu, sigma=panel$sigma), col="blue")
-       plot(x, pNBI(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="NBI cumulative probability function")
+       plot(x, pNBI(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="NBI cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('NBI',  mu= 5, sigma=1,  ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
    }
 }
 #------------------------------------------------------------------------------
@@ -1118,15 +1241,15 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        x <- seq(0, 50, 1)
-       plot(x, dNBII(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="NBII probability density function")
+       plot(x, dNBII(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="NBII probability function")
        points(x, dNBII(x, mu=panel$mu, sigma=panel$sigma), col="blue")
-       plot(x, pNBII(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="NBII cumulative probability function")
+       plot(x, pNBII(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="NBII cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('NBII',  mu= 5, sigma=1,  ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.1, to=20, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.1, to=20, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
    }
 }
 #-----------------------------------------------------------------------------
@@ -1141,15 +1264,15 @@ if (interactive())
           {
        op <- par(mfrow = c(2, 1))
         y <- seq(0, 50, 1)
-         plot(y, dPIG(y, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(y)", main="PIG probability density function")
+         plot(y, dPIG(y, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(y)", main="PIG probability function")
        points(y, dPIG(y, mu=panel$mu, sigma=panel$sigma), col="blue")
-         plot(y, pPIG(y, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(y)", main="PIG cumulative probability function")
+         plot(y, pPIG(y, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(y)", main="PIG cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('PIG',  mu= 5, sigma=1, ymax=1 )
-         rp.slider(ppoispanel,  var=mu,    from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu,    from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
    }
 }
 #-----------------------------------------------------------------------------
@@ -1165,16 +1288,16 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        y <- seq(0, 50, 1)
-       plot(y, dDEL(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="h", ylab="f(y)", main="probability density function")
+       plot(y, dDEL(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="h", ylab="f(y)", main="probability function")
        points(y, dDEL(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), col="blue")
-       plot(y, pDEL(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="s", ylab="F(y)", main="cumulative probability function")
+       plot(y, pDEL(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="s", ylab="F(y)", main="cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('DEL',  mu= 5, sigma=1, nu=0.5, ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T)  
-         rp.slider(ppoispanel,  var=nu, from=0.01, to=0.99, resolution=0.001,  action = density.draw, title="nu",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
+         rp.slider(ppoispanel,  variable=nu, from=0.01, to=0.99, resolution=0.001,  action = density.draw, title="nu",  showvalue = TRUE)  
 
    }
 }
@@ -1192,16 +1315,16 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        y <- seq(0, 50, 1)
-       plot(y, dSICHEL(y,   mu=panel$mu,   sigma=panel$sigma, nu=panel$nu), type="h", ylab="f(y)", main="probability density function")
+       plot(y, dSICHEL(y,   mu=panel$mu,   sigma=panel$sigma, nu=panel$nu), type="h", ylab="f(y)", main="probability function")
        points(y, dSICHEL(y, mu=panel$mu,   sigma=panel$sigma, nu=panel$nu), col="blue")
-       plot(y, pSICHEL(y,   mu=panel$mu,   sigma=panel$sigma, nu=panel$nu), type="s", ylab="F(y)", main="cumulative probability function")
+       plot(y, pSICHEL(y,   mu=panel$mu,   sigma=panel$sigma, nu=panel$nu), type="s", ylab="F(y)", main="cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('SICHEL',  mu= 5, sigma=1, nu=0, ymax=1 )
-         rp.slider(ppoispanel,  var=mu,    from=0.1, to=30, resolution=0.1,   action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.1, to=5,  resolution=0.01,  action = density.draw, title="sigma",  showvalue = T)  
-         rp.slider(ppoispanel,  var=nu,    from=-4,  to=4,  resolution=0.01,  action = density.draw, title="nu",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu,    from=0.1, to=30, resolution=0.1,   action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.1, to=5,  resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
+         rp.slider(ppoispanel,  variable=nu,    from=-4,  to=4,  resolution=0.01,  action = density.draw, title="nu",  showvalue = TRUE)  
 
    }
 }
@@ -1217,15 +1340,15 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        x <- seq(0, 50, 1)
-       plot(x, dZIP(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="probability density function")
+       plot(x, dZIP(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="probability function")
        points(x, dZIP(x, mu=panel$mu, sigma=panel$sigma), col="blue")
-       plot(x, pZIP(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="cumulative probability function")
+       plot(x, pZIP(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('ZIP',  mu= 5, sigma=.2,  ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="sigma",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="sigma",  showvalue = TRUE)  
    }
 }
 #----------------------------------------------------------------------------
@@ -1240,15 +1363,15 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        x <- seq(0, 50, 1)
-       plot(x, dZIP2(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="probability density function")
+       plot(x, dZIP2(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="probability function")
        points(x, dZIP2(x, mu=panel$mu, sigma=panel$sigma), col="blue")
-       plot(x, pZIP2(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="cumulative probability function")
+       plot(x, pZIP2(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('ZIP2',  mu= 5, sigma=.2,  ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="sigma",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="sigma",  showvalue = TRUE)  
    }
 }
 #------------------------------------------------------------------------------------------
@@ -1263,15 +1386,15 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        x <- seq(0, 40, 1)
-       plot(x, dZAP(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="ZAP probability density function")
+       plot(x, dZAP(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="ZAP probability function")
        points(x, dZAP(x, mu=panel$mu, sigma=panel$sigma), col="blue")
-       plot(x, pZAP(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="ZAP cumulative probability function")
+       plot(x, pZAP(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="ZAP cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('ZAP',  mu= 5, sigma=.1,  ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.1, to=20, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="sigma",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.1, to=20, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="sigma",  showvalue = TRUE)  
    }
 }
 #------------------------------------------------------------------------------------------
@@ -1286,15 +1409,15 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        x <- seq(0, 50, 1)
-       plot(x, dZALG(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="ZALG probability density function")
+       plot(x, dZALG(x, mu=panel$mu, sigma=panel$sigma), type="h", ylab="f(x)", main="ZALG probability function")
        points(x, dZALG(x, mu=panel$mu, sigma=panel$sigma), col="blue")
-       plot(x, pZALG(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="ZALG cumulative probability function")
+       plot(x, pZALG(x, mu=panel$mu, sigma=panel$sigma), type="s", ylab="F(x)", main="ZALG cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('ZALG',  mu= .5, sigma=.5,  ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="sigma",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.01, to=.99, resolution=0.001,  action = density.draw, title="sigma",  showvalue = TRUE)  
    }
 }
 #------------------------------------------------------------------------------------------
@@ -1310,16 +1433,16 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        y <- seq(0, 50, 1)
-       plot(y, dZANBI(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="h", ylab="f(y)", main="ZANBI probability density function")
+       plot(y, dZANBI(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="h", ylab="f(y)", main="ZANBI density function")
        points(y, dZANBI(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), col="blue")
-       plot(y, pZANBI(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="s", ylab="F(y)", main="ZANBI cumulative probability function")
+       plot(y, pZANBI(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="s", ylab="F(y)", main="ZANBI cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('ZANBI',  mu= 5, sigma=1, nu=0.1, ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T)  
-         rp.slider(ppoispanel,  var=nu, from=0.01, to=0.99, resolution=0.001,  action = density.draw, title="nu",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
+         rp.slider(ppoispanel,  variable=nu, from=0.01, to=0.99, resolution=0.001,  action = density.draw, title="nu",  showvalue = TRUE)  
 
    }
 }
@@ -1336,16 +1459,16 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        y <- seq(0, 50, 1)
-       plot(y, dZINBI(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="h", ylab="f(y)", main="ZINBI probability density function")
+       plot(y, dZINBI(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="h", ylab="f(y)", main="ZINBI probability function")
        points(y, dZINBI(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), col="blue")
-       plot(y, pZINBI(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="s", ylab="F(y)", main="ZINBI cumulative probability function")
+       plot(y, pZINBI(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="s", ylab="F(y)", main="ZINBI cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('ZINBI',  mu= 5, sigma=1, nu=0.1, ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T)  
-         rp.slider(ppoispanel,  var=nu, from=0.01, to=0.99, resolution=0.001,  action = density.draw, title="nu",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.1, to=5, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
+         rp.slider(ppoispanel,  variable=nu, from=0.01, to=0.99, resolution=0.001,  action = density.draw, title="nu",  showvalue = TRUE)  
 
    }
 }
@@ -1373,16 +1496,16 @@ if (interactive())
  
        op<-par(mfrow = c(2, 1))
        y <- seq(0, 50, 1)
-       plot(y, dZIPIG(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="h", ylab="f(y)", main="ZIPIG probability density function")
+       plot(y, dZIPIG(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="h", ylab="f(y)", main="ZIPIG probability function")
        points(y, dZIPIG(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), col="blue")
-       plot(y, pZIPIG(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="s", ylab="F(y)", main="ZIPIG cumulative probability function")
+       plot(y, pZIPIG(y, mu=panel$mu, sigma=panel$sigma,nu=panel$nu), type="s", ylab="F(y)", main="ZIPIG cumulative distribution function")
       par(op) 
       panel
            }
          ppoispanel <- rp.control('ZIPIG',  mu=5, sigma=1, nu=0.1, ymax=1 )
-         rp.slider(ppoispanel,  var=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = T) 
-         rp.slider(ppoispanel,  var=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = T)  
-         rp.slider(ppoispanel,  var=nu, from=0.01, to=0.99, resolution=0.001,  action = density.draw, title="nu",  showvalue = T)  
+         rp.slider(ppoispanel,  variable=mu, from=0.1, to=30, resolution=0.01,  action = density.draw, title="mu",  showvalue = TRUE) 
+         rp.slider(ppoispanel,  variable=sigma, from=0.1, to=10, resolution=0.01,  action = density.draw, title="sigma",  showvalue = TRUE)  
+         rp.slider(ppoispanel,  variable=nu, from=0.01, to=0.99, resolution=0.001,  action = density.draw, title="nu",  showvalue = TRUE)  
 
    }
 }
@@ -1411,7 +1534,7 @@ demo.BI <- function()
          }
             }
    bipanel <- rp.control("binomial distribution", N=10, mu=.5)
-   rp.slider(bipanel, var = mu, from=0.01, to=1, resolution=0.01,  action =  plotf, title="mu",  showvalue = T)  
+   rp.slider(bipanel, variable = mu, from=0.01, to=1, resolution=0.01,  action =  plotf, title="mu",  showvalue = TRUE)  
    rp.textentry(bipanel, N, plotf, labels = c("N"), initval = c(10))
    rp.do(bipanel, plotf)
         #rp.textentry(tables.panel, xobs, tables.redraw, "Observed value",
@@ -1437,9 +1560,9 @@ demo.BB <- function()
       panel
          }
             }
-   bipanel <- rp.control("binomial distribution", N=10, mu=.5, sigma=1)
-   rp.slider(bipanel, var = mu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="mu",  showvalue = T) 
-   rp.slider(bipanel, var = sigma, from=0.01, to=3, resolution=0.001,  action =  plotf, title="sigma",  showvalue = T)   
+   bipanel <- rp.control("beta binomial distribution", N=10, mu=.5, sigma=1)
+   rp.slider(bipanel, variable = mu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="mu",  showvalue = TRUE) 
+   rp.slider(bipanel, variable = sigma, from=0.01, to=3, resolution=0.001,  action =  plotf, title="sigma",  showvalue = TRUE)   
    rp.textentry(bipanel, N, plotf, labels = c("N"), initval = c(10))
    rp.do(bipanel, plotf)
         #rp.textentry(tables.panel, xobs, tables.redraw, "Observed value",
@@ -1465,8 +1588,8 @@ demo.ZABI <- function()
          }
             }
    bipanel <- rp.control("ZABI distribution", N=10, mu=.5, sigma=.1)
-   rp.slider(bipanel, var = mu, from=0.001, to=0.999, resolution=0.001,  action =  plotf, title="mu",  showvalue = T) 
-   rp.slider(bipanel, var = sigma, from=0.001, to=0.999, resolution=0.001,  action =  plotf, title="sigma",  showvalue = T)   
+   rp.slider(bipanel, variable = mu, from=0.001, to=0.999, resolution=0.001,  action =  plotf, title="mu",  showvalue = TRUE) 
+   rp.slider(bipanel, variable = sigma, from=0.001, to=0.999, resolution=0.001,  action =  plotf, title="sigma",  showvalue = TRUE)   
    rp.textentry(bipanel, N, plotf, labels = c("N"), initval = c(10))
    rp.do(bipanel, plotf)
         #rp.textentry(tables.panel, xobs, tables.redraw, "Observed value",
@@ -1492,8 +1615,8 @@ demo.ZIBI <- function()
          }
             }
    bipanel <- rp.control("ZIBI distribution", N=10, mu=.5, sigma=.1)
-   rp.slider(bipanel, var = mu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="mu",  showvalue = T) 
-   rp.slider(bipanel, var = sigma, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="sigma",  showvalue = T)   
+   rp.slider(bipanel, variable = mu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="mu",  showvalue = TRUE) 
+   rp.slider(bipanel, variable = sigma, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="sigma",  showvalue = TRUE)   
    rp.textentry(bipanel, N, plotf, labels = c("N"), initval = c(10))
    rp.do(bipanel, plotf)
         #rp.textentry(tables.panel, xobs, tables.redraw, "Observed value",
@@ -1522,9 +1645,9 @@ demo.ZABB <- function()
          }
             }
    bipanel <- rp.control("ZABB distribution", N=10, mu=.5, sigma=1, nu=.1)
-   rp.slider(bipanel, var = mu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="mu",  showvalue = T) 
-   rp.slider(bipanel, var = sigma, from=0.01, to=3, resolution=0.001,  action =  plotf, title="sigma",  showvalue = T)
-   rp.slider(bipanel, var = nu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="nu",  showvalue = T)    
+   rp.slider(bipanel, variable = mu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="mu",  showvalue = TRUE) 
+   rp.slider(bipanel, variable = sigma, from=0.01, to=3, resolution=0.001,  action =  plotf, title="sigma",  showvalue = TRUE)
+   rp.slider(bipanel, variable = nu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="nu",  showvalue = TRUE)    
    rp.textentry(bipanel, N, plotf, labels = c("N"), initval = c(10))
    rp.do(bipanel, plotf)
         #rp.textentry(tables.panel, xobs, tables.redraw, "Observed value",
@@ -1553,9 +1676,9 @@ demo.ZIBB <- function()
          }
             }
    bipanel <- rp.control("ZIBB distribution", N=10, mu=.5, sigma=1, nu=.1)
-   rp.slider(bipanel, var = mu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="mu",  showvalue = T) 
-   rp.slider(bipanel, var = sigma, from=0.01, to=3, resolution=0.001,  action =  plotf, title="sigma",  showvalue = T)
-   rp.slider(bipanel, var = nu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="nu",  showvalue = T)    
+   rp.slider(bipanel, variable = mu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="mu",  showvalue = TRUE) 
+   rp.slider(bipanel, variable = sigma, from=0.01, to=3, resolution=0.001,  action =  plotf, title="sigma",  showvalue = TRUE)
+   rp.slider(bipanel, variable = nu, from=0.001, to=.999, resolution=0.001,  action =  plotf, title="nu",  showvalue = TRUE)    
    rp.textentry(bipanel, N, plotf, labels = c("N"), initval = c(10))
    rp.do(bipanel, plotf)
         #rp.textentry(tables.panel, xobs, tables.redraw, "Observed value",

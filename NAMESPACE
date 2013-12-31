@@ -1,6 +1,9 @@
 
 # functions
-
+importFrom(gamlss)
+importFrom(gamlss.tr)
+importFrom(gamlss.util)
+importFrom(rpanel)
 export( demo.BE, demo.BCCG, demo.BCT,  demo.BCPE, # continuous
         demo.EXP, demo.exGAUS,demo.EGB2, demo.GA,
         demo.GB1, demo.GB2,  demo.GG, demo.GIG,
@@ -25,6 +28,8 @@ export( demo.BE, demo.BCCG, demo.BCT,  demo.BCPE, # continuous
         demo.ZABB, demo.ZIBB,
         demo.YULE, demo.WARING, demo.GEOM, demo.IGAMMA, demo.PARETO2,
         demo.SHASHo, demo.SHASHo2,  demo.PARETO2o, 
+        demo.SN1, demo.SN2, demo.SST,  demo.TF2,
+        demo.LOGNO2, demo.LOGITNO,
         demo.NOtr, demo.GAtr, # truncated
         demo.BetaSplines, demo.discreteSmo,
         demo.histSmo, demo.interpolateSmo,
