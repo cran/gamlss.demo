@@ -1,19 +1,19 @@
-\name{demo.BetaSplines}
-\alias{demo.BetaSplines}
-\alias{demo.discreteSmo}
+\name{demo.BSplines}
+\alias{demo.BSplines}
+\alias{demo.RandomWalk}
 \alias{demo.histSmo}
 \alias{demo.interpolateSmo}
-\alias{demo.PenSplines}
+\alias{demo.PSplines}
 
 \title{Demos for smoothing techniques}
 \description{These are demos for teaching smoothing techniques to students}
 
 \usage{
-demo.BetaSplines()
-demo.discreteSmo(y = NULL, ...)
+demo.BSplines()
+demo.RandomWalk(y = NULL, ...)
 demo.histSmo(y = NULL, ...)
 demo.interpolateSmo(y = NULL, w = NULL, ...)
-demo.PenSplines(y = NULL, x = NULL, ...)
+demo.PSplines(y = NULL, x = NULL, ...)
 }
 
 \arguments{
@@ -45,7 +45,7 @@ Stasinopoulos D. M. Rigby R.A. (2007) Generalized additive models for location s
 \author{Paul Eirers \email{p.eilers@erasmusmc.nl}, Brian Marx \email{bmarx@LSU.EDU}, and Mikis Stasinopoulos \email{d.stasinopoulos@londonmet.ac.uk}}
 
 \examples{
-demo.PenSplines()
+demo.PSplines()
 }
 
 \keyword{regression}

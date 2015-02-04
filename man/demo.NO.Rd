@@ -85,6 +85,7 @@
 \alias{demo.SN2}
 \alias{demo.SST}
 \alias{demo.TF2}
+\alias{demo.DPO}
 
 \title{Demos for different gamlss.family distributions}
 \description{
@@ -179,6 +180,7 @@ demo.SN1()
 demo.SN2()
 demo.SST()
 demo.TF2()
+demo.DPO()
 }
 
 

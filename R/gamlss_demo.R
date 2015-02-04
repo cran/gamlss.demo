@@ -42,7 +42,7 @@ gamlss.demo<-function()
 
  demoLpolyS<-function()
  {
- tpoly  <-  tktoplevel() # Core Static Window with type of Psplines.
+  tpoly  <-  tktoplevel() # Core Static Window with type of Psplines.
   tkwm.resizable(tpoly, 0, 0)  # Cancels Maximization                                                                        
   type <- tclVar(0)
   tkwm.title(tpoly,"Demos for local polynomial smoothing")
@@ -50,7 +50,7 @@ gamlss.demo<-function()
   frame.base <- tkframe(tpoly,relief="ridge",borderwidth=8)
    frame.2nd <- tkframe(frame.base,relief="ridge",borderwidth=8,cursor="hand1")
   tkgrid(tklabel(tpoly,text="               Choose one of the following:              ",font = tkfont.create(family="times",size=12,weight="bold")) ,columnspan=2)
-  for (pa in c("Local mean", "W. Local mean", "Local polynomial", "W. Local polynomial"))
+  for (pa in c("Local mean", "Weighted Local mean", "Local polynomial", "Weighted Local polynomial", "Demo for Local Fits"))
    {
     master.radio.box.options<-tkradiobutton(frame.2nd,text=pa,value=pa,variable=type)
     tkpack(master.radio.box.options,anchor="w")
@@ -60,9 +60,10 @@ gamlss.demo<-function()
   tkgrid(frame.base,columnspan=2)
   tmpoly<-function(){
    if(tclvalue(type)=="Local mean"){demo.Locmean()}
-   if(tclvalue(type)=="Local polynomial"){demo.discreteSmo()}
-   if(tclvalue(type)=="W. Local polynomial"){demo.Locpoly()}
-   if(tclvalue(type)=="W. Local mean"){demo.WLocmean()}             
+   if(tclvalue(type)=="Local polynomial"){demo.Locpoly()}
+   if(tclvalue(type)=="Weighted Local mean"){demo.WLocmean()} 
+   if(tclvalue(type)=="Weighted Local polynomial"){demo.WLocpoly()} 
+   if(tclvalue(type)=="Demo for Local Fits"){demo.LocalRegression()} 
   } 
   Dpoly<-function(){
    tkdestroy(tpoly)

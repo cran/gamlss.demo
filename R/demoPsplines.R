@@ -18,20 +18,20 @@ if(exists("tsplines",envir=.GlobalEnv)) {tkdestroy(tsplines)}
   frame.base <- tkframe(tsplines,relief="ridge",borderwidth=8)
    frame.2nd <- tkframe(frame.base,relief="ridge",borderwidth=8,cursor="hand1")
    tkgrid(tklabel(tsplines,text="          Choose one of the following:         ",font = tkfont.create(family="times",size=12,weight="bold")) ,columnspan=2)
-   for (pa in c("demo.BetaSplines", "demo.discreteSmo", "demo.histSmo", "demo.interpolateSmo", "demo.PenSplines"))
+   for (pa in c("demo.BSplines", "demo.RandomWalk", "demo.histSmo", "demo.interpolateSmo", "demo.PSplines"))
      {
       master.radio.box.options<-tkradiobutton(frame.2nd,text=pa,value=pa,variable=type)
       tkpack(master.radio.box.options,anchor="w")
      }
- tclvalue(type) <- "demo.BetaSplines"
+ tclvalue(type) <- "demo.BSplines"
  tkgrid(frame.2nd, columnspan=2)
  tkgrid(frame.base,columnspan=2)
                      tmsplines<-function(){
-  if(tclvalue(type)=="demo.BetaSplines"){demo.BetaSplines()}
-  if(tclvalue(type)=="demo.discreteSmo"){demo.discreteSmo()}
+  if(tclvalue(type)=="demo.BSplines"){demo.BSplines()}
+  if(tclvalue(type)=="demo.RandomWalk"){demo.RandomWalk()}
   if(tclvalue(type)=="demo.histSmo"){demo.histSmo()}
   if(tclvalue(type)=="demo.interpolateSmo"){demo.interpolateSmo()}       
-  if(tclvalue(type)=="demo.PenSplines"){demo.PenSplines()}              
+  if(tclvalue(type)=="demo.PSplines"){demo.PSplines()}              
  } 
   Dsplines<-function(){
    tkdestroy(tsplines)

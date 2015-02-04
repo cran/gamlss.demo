@@ -1,5 +1,5 @@
 # Visualize P-splines
-demo.PenSplines <- function(y=NULL, x=NULL, ...)
+demo.PSplines <- function(y=NULL, x=NULL, ...)
 {
   tpower <- function(x, t, p)
  # Truncated p-th power function

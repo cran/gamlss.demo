@@ -48,7 +48,7 @@ Stasinopoulos D. M. Rigby R.A. (2007) Generalized additive models for location s
 
 
 
-\seealso{\code{\link{demo.PenSplines}}}
+\seealso{\code{\link{demo.PSplines}}}
 
 \examples{
  demo.Locmean()

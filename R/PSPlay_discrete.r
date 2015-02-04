@@ -1,5 +1,5 @@
 # Visualize Whittaker smoother
-demo.discreteSmo <- function(y=NULL,...)
+demo.RandomWalk <- function(y=NULL,...)
 {
   whitsm = function(y, lambda = 10, d = 2)
      {

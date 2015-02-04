@@ -1,9 +1,10 @@
 
 # functions
-importFrom(gamlss)
-importFrom(gamlss.tr)
-importFrom(gamlss.util)
-importFrom(rpanel)
+import(gamlss.dist)
+import(gamlss.tr)
+import(rpanel)
+import(tcltk)
+#importFrom(MASS, mcycle)
 export( demo.BE, demo.BCCG, demo.BCT,  demo.BCPE, # continuous
         demo.EXP, demo.exGAUS,demo.EGB2, demo.GA,
         demo.GB1, demo.GB2,  demo.GG, demo.GIG,
@@ -24,16 +25,18 @@ export( demo.BE, demo.BCCG, demo.BCT,  demo.BCPE, # continuous
         demo.ZAP,demo.ZALG,
         demo.ZANBI, demo.ZINBI,
         demo.ZIP, demo.ZIP2,
-        demo.ZIPIG,
+        demo.ZIPIG,demo.DPO,
         demo.ZABB, demo.ZIBB,
         demo.YULE, demo.WARING, demo.GEOM, demo.IGAMMA, demo.PARETO2,
         demo.SHASHo, demo.SHASHo2,  demo.PARETO2o, 
         demo.SN1, demo.SN2, demo.SST,  demo.TF2,
         demo.LOGNO2, demo.LOGITNO,
         demo.NOtr, demo.GAtr, # truncated
-        demo.BetaSplines, demo.discreteSmo,
+        demo.BSplines, demo.RandomWalk,
         demo.histSmo, demo.interpolateSmo,
-        demo.PenSplines, demo.Locmean,
+        demo.PSplines, demo.Locmean,
         demo.Locpoly, demo.WLocmean,
         demo.WLocpoly,
-        demoDist, demoPsplines, gamlss.demo, demoLpolyS)#
+        demoDist, demoPsplines, gamlss.demo, demoLpolyS,
+        demo.LocalRegression, LPOL, WLPOL,
+         Locmean, Locpoly, WLocmean, WLocpoly)#

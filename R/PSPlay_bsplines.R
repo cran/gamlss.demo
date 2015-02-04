@@ -1,4 +1,4 @@
-demo.BetaSplines <- function()
+demo.BSplines <- function()
 {
  tpower <- function(x, t, p)
  # Truncated p-th power function
