@@ -4,6 +4,9 @@ import(gamlss.dist)
 import(gamlss.tr)
 import(rpanel)
 import(tcltk)
+import(stats)
+import(graphics)
+import(grDevices)
 #importFrom(MASS, mcycle)
 export( demo.BE, demo.BCCG, demo.BCT,  demo.BCPE, # continuous
         demo.EXP, demo.exGAUS,demo.EGB2, demo.GA,
